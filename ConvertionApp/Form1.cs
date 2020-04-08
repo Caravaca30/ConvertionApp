@@ -48,7 +48,7 @@ namespace ConvertionApp
             fileNewLocation = fileNewLocation.Replace(fileName.Text, "");
             System.Console.WriteLine(fileNewLocation + fileNewName);
             UniversalProjectReader reader = new UniversalProjectReader();
-            ProjectFile project = reader.read(@"C:\Users\GOCG\Desktop\Blue Ridge Community College - O365 Tenant Consolidation.mpp");
+            ProjectFile project = reader.read(fileLocation.Text);
             System.Console.WriteLine(fileLocation.Text);
             ProjectWriter writer = new MSPDIWriter();
             writer.write(project, @"C:\Users\GOCG\Desktop\" + fileNewName);
